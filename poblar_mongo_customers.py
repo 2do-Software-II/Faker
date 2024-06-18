@@ -4,7 +4,7 @@ from bson.objectid import ObjectId
 import random
 
 # Reemplaza con tu URI de conexión a MongoDB Atlas
-MONGO_URI = 'mongodb://mongo:iBebgtodjikVVRjkcYVaPJoShLURuLmY@roundhouse.proxy.rlwy.net:21591'
+MONGO_URI = 'mongodb://mongo:GVGkFJuAipjycAoKCuNVqQFXfelIzbpS@monorail.proxy.rlwy.net:35552'
 abreviaturas_estados_bolivianos = ['LP', 'OR', 'PT', 'CQ', 'SC', 'CB', 'PA', 'CH', 'TA', 'BE']
 
 # Conectar a MongoDB Atlas
@@ -18,7 +18,7 @@ roles_collection = db['Role']
 # Crear instancia de Faker
 fake = Faker('es_ES')
 # ID del role común para todos los usuarios
-role_id = ObjectId('66661bb7ea87b472fcb66cde')
+role_id = ObjectId('6670829f0cd84d6a153b5ec9')
 
 # Asegurarse de que el rol exista en la base de datos
 roles_collection.update_one({'_id': role_id}, {'$setOnInsert': {'name': 'default_role'}}, upsert=True)

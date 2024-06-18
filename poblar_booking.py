@@ -4,7 +4,7 @@ from bson.objectid import ObjectId
 import random
 
 # Reemplaza con tu URI de conexión a MongoDB Atlas
-MONGO_URI = 'mongodb://mongo:iBebgtodjikVVRjkcYVaPJoShLURuLmY@roundhouse.proxy.rlwy.net:21591'
+MONGO_URI = 'mongodb://mongo:GVGkFJuAipjycAoKCuNVqQFXfelIzbpS@monorail.proxy.rlwy.net:35552'
 
 # Conectar a MongoDB Atlas
 client = MongoClient(MONGO_URI)
@@ -52,7 +52,7 @@ def generar_reservacion_falsa():
         'checkIn': start_date,
         'checkOut': end_date,
         'prePaid': 0,
-        'fullPayment': round(random.uniform(100.0, 3000.0), 2),
+        'fullPayment': round(random.uniform(300.0, 2500.0), 2),
         'paymentMethod': fake.random_element(elements=('EFECTIVO', 'TARJETA', 'TRANSFERENCIA', 'DEPOSITO','ONLINE')),
         'startDate': start_date,
         'endDate': end_date,
@@ -76,7 +76,7 @@ def poblar_base_de_datos(num_reservaciones):
     print(f'Se han insertado {num_reservaciones} reservaciones en la base de datos.')
 
 # Número de documentos a insertar
-NUMERO_DE_RESERVACIONES = 400
+NUMERO_DE_RESERVACIONES = 300
 
 # Poblar la base de datos
 poblar_base_de_datos(NUMERO_DE_RESERVACIONES)
